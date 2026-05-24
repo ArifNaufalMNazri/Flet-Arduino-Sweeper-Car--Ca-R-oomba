@@ -2,7 +2,7 @@
 I built an Arduino-powered sweeper-car, named Ca-R-oomba, controlled via the serial port with a custom Python and Flet application.
 
 <p align = "center">
-<img src="./images/Car-Front-View.jpg" width=1000 heigh = 500>
+<img src="./images/Car-Front-View.jpg" width=1000 height = 500>
 </p>
  
 ## The idea 💡
@@ -11,19 +11,25 @@ I wanted to build a remote-controlled *something*. A car seemed like the simples
 - Build **my own app** to control the car
 - Add a **sweeper** to make it a roomba
 
+<p align = "center">
+ <img src="./images/Car-Build-1.jpg" width = 1000 height = 500>
+</p>
+
 And I named it, the **Ca-R-oomba**. I made this project in phases. 
 
 ## Phase 1: Learning Flet
 I chose to use the **Flet Python programming framework** because I already had some background in Python, and it seemed the most beginner-friendly. I followed [this](//www.youtube.com/watch?v=jqAQ4oQGUH0) youtube tutorial video to learn the basics.
 
 <p align="center">
-<img src = "./images/flet-learning-video-ss.png" height = 400 width = 600>
-  </p>
+ <img src = "./images/flet-learning-video-ss.png" height = 400 width = 600>
+
+</p>
 
 Then, I built a test app to experiment with the future car contorls, which I have posted as its own repo on my profile. 
 
 <p align = "center">
   <img src="./images/cartestapp-photo.png" height = 300 width = 300>
+ <img src="./images/Cartestappphoto.jpg" width = 500 height = 500>
 </p>
 
 ## Phase 2: Building the Car
