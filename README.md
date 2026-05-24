@@ -2,10 +2,10 @@
 I built an Arduino-powered sweeper-car, named Ca-R-oomba, controlled via the serial port with a custom Python and Flet application.
 
 <p align = "center">
-<img src="../images/Car-Front-View.jpg" width=100% heigh = 500>
+<img src="./images/Car-Front-View.jpg" width=1000 heigh = 500>
 </p>
 
-## The idea
+## The idea 💡
 I wanted to build a remote-controlled *something*. A car seemed like the simplest choice, but after seeing all the available youtube videos online, I needed to make mine different. I decided to do 3 things: 
 - Use the **Serial port**, not Bluetooth
 - Build **my own app** to control the car
@@ -16,8 +16,15 @@ And I named it, the **Ca-R-oomba**. I made this project in phases.
 ## Phase 1: Learning Flet
 I chose to use the **Flet Python programming framework** because I already had some background in Python, and it seemed the most beginner-friendly. I followed [this](//www.youtube.com/watch?v=jqAQ4oQGUH0) youtube tutorial video to learn the basics.
 
+<p align="center">
+<img src = "./images/flet-learning-video-ss.png" height = 400 width = 600>
+  </p>
 
-Then, I built a test app to experiment with the futur car contorls, which I have posted as it's own repo on my profile. 
+Then, I built a test app to experiment with the future car contorls, which I have posted as its own repo on my profile. 
+
+<p align = "center">
+  <img src="./images/cartestapp-photo.png" height = 300 width = 300>
+</p>
 
 ## Phase 2: Building the Car
 This was the simplest part of the project. I followed another youtube tutorial online and wired the motors so they would spin in a given direction. 
@@ -35,6 +42,12 @@ I seperated the *driving-aspect* of the car into its own **header file** so as t
 
 ## Phase 6: Testing the Car
 With Phases 1-5 completed, it was time to test the car. It took a bit of rewiring and code corrections, but everything worked as expected. The Flet App sent the correct signals and the car moved accordingly. 
+
+<p align = "center">
+  <img src = "./images/CarMovingRecord-ezgif.com-optimize.gif" width = 1000 height = 500>
+</p>
+
+*Controller may not be in sync with car movement, but I did control it in this gif. Editing was a bit rough*
 
 ## Phase 7: Learning the HC-SR04 and integrating with MG995 servos
 For the car to detect objects in its path, I needed to use the **HC-SR04** to detect whether an object was within **sweeping range, 6cm**. I learned it using another youtube tutorial, and integrated it with the servos to make them turn *70 degrees* when an object was detected.
