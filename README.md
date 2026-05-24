@@ -12,7 +12,7 @@ I wanted to build a remote-controlled *something*. A car seemed like the simples
 - Add a **sweeper** to make it a roomba
 
 <p align = "center">
- <img src="./images/Car-Build-1.jpg" width = 1000 height = 500>
+ <img src="./images/Car-Photo.jpg" width = 1000 height = 500>
 </p>
 
 And I named it, the **Ca-R-oomba**. I made this project in phases. 
@@ -35,13 +35,30 @@ Then, I built a test app to experiment with the future car contorls, which I hav
 ## Phase 2: Building the Car
 This was the simplest part of the project. I followed another youtube tutorial online and wired the motors so they would spin in a given direction. 
 
+<p align = "center">
+ <img src="./images/Car-Build-2.jpg" height = 500 width = 500>
+ <img src="./images/Car-Build-3.jpg" height = 500 width = 500>
+</p>
+
 ## Phase 3: Learning to communicate VS code with Arduino using serial
 I learned this by creating a test app which allowed *serial signals* to be sent to the arduino and read back to the command line based on instructions from the Arduino. I used the `pyserial` library for this. 
 
+<p align = "center">
+ <img src="./images/ComTest.png" height = 500 width = 500>
+</p>
+
 ## Phase 4: Building the Car App
 At first, I made the buttons **click-only**, which meant I had to click several times to move the car. It worked, though. 
+<p align = "center">
+ <img src="./images/10000822531-ezgif.com-optimize.gif" height = 500 width = 1000>
+</p>
 
 I decided to transition to making the buttons hold-able. I switched from `.IconButton()` to `.GestureDetector()` in a `.Container()` to allow button-holds to be detected. The buttons transmit a **specific signal** to the Arduino when pressed and when held, enabling the car to respond to commands accordingly. I added a *title* to the app and gave it a `.TextField()` to display the current direction of the car. I also used `async` to not freeze the user interface.
+
+<p align = "center">
+ <img src="./images/actualcarapp.png" height = 500 width = 500>
+ <img src="./images/actualcarappworking.png" height = 500 width = 500>
+</p>
 
 ## Phase 5: Building the Arduino Code
 I seperated the *driving-aspect* of the car into its own **header file** so as to not clutter the main file, and name it `driving_module.h`. In that file, I created a Car Class to store the pins, the setup function via the constructor, and the various direction functions for moving `forward()`, `backward()`, `left()`, `right()` and `stop()`. Additionally, I created a `commmand()` function to take the serial signal from the Flet App and map it to its specific function. 
@@ -50,7 +67,7 @@ I seperated the *driving-aspect* of the car into its own **header file** so as t
 With Phases 1-5 completed, it was time to test the car. It took a bit of rewiring and code corrections, but everything worked as expected. The Flet App sent the correct signals and the car moved accordingly. 
 
 <p align = "center">
-  <img src = "./images/CarMovingRecord-ezgif.com-optimize.gif" width = 1000 height = 500>
+  <img src = "./images/CarMovingRecord-ezgif.com-optimize.gif" width = 500 height = 500>
 </p>
 
 *Controller may not be in sync with car movement, but I did control it in this gif. Editing was a bit rough*
