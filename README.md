@@ -4,7 +4,7 @@ I built an Arduino-powered sweeper-car, named Ca-R-oomba, controlled via the ser
 <p align = "center">
 <img src="./images/Car-Front-View.jpg" width=1000 heigh = 500>
 </p>
-
+ 
 ## The idea 💡
 I wanted to build a remote-controlled *something*. A car seemed like the simplest choice, but after seeing all the available youtube videos online, I needed to make mine different. I decided to do 3 things: 
 - Use the **Serial port**, not Bluetooth
