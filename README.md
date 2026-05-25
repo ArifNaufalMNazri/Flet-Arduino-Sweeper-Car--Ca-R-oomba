@@ -123,6 +123,13 @@ After making it through phase 9, I conducted a test of the car and sweepers by p
  <img src = "./images/sweeper-top-view.gif" height = 500 width = 250>
 </p>
 
+### Code Links
+- Arduino Code: [Click Here](./code/serial-car-controller-folder(Arduino%20Code))
+- Serial Car Controller App: [Click Here](./code/serial_car_app.py)
+- First Car Test App: [Click Here](https://github.com/ArifNaufalMNazri/Car-Controls-Test-App/blob/main/cartestapp.py)
+- Communcating Serial Port to Arduino Test: [Click Here](./code/com_Arduino_test.py)
+- First App Made: [Click Here](./code/learning_flet.py)
+
 ## Parting Thoughts
 I am happy to have learnt app development, hardware integration, serial and IDE communication through this project. I learned a lot about `async`, running systems simultaneously and more. I hope to bring these skills forward in my future projects. 
 
