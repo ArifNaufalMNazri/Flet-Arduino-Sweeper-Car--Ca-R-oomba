@@ -63,6 +63,10 @@ I decided to transition to making the buttons hold-able. I switched from `.IconB
 ## Phase 5: Building the Arduino Code
 I seperated the *driving-aspect* of the car into its own **header file** so as to not clutter the main file, and name it `driving_module.h`. In that file, I created a Car Class to store the pins, the setup function via the constructor, and the various direction functions for moving `forward()`, `backward()`, `left()`, `right()` and `stop()`. Additionally, I created a `commmand()` function to take the serial signal from the Flet App and map it to its specific function. 
 
+<p align = "center">
+ <img src="./images/Code-Scroll.gif" height = 500 width = 500>
+</p>
+
 ## Phase 6: Testing the Car
 With Phases 1-5 completed, it was time to test the car. It took a bit of rewiring and code corrections, but everything worked as expected. The Flet App sent the correct signals and the car moved accordingly. 
 
@@ -74,11 +78,32 @@ With Phases 1-5 completed, it was time to test the car. It took a bit of rewirin
 
 ## Phase 7: Learning the HC-SR04 and integrating with MG995 servos
 For the car to detect objects in its path, I needed to use the **HC-SR04** to detect whether an object was within **sweeping range, 6cm**. I learned it using another youtube tutorial, and integrated it with the servos to make them turn *70 degrees* when an object was detected.
+<p align = "center">
+  <img src="./images/Sensor-Servo-Test-ezgif.com-optimize.gif" height = 500 width = 500>
+</p>
+
 
 After that, I created a `sweeper_module.h` file to store these functions: `check_distance_cm()`, which took two ints for the trigger and echo pins, and `sweep()`, which took two servo **objects** and a `boolean` to check whether an object was in range. 
 
+<p align = "center">
+ <img src="./images/sweeper_module_photo.png" height = 500 width = 500>
+</p>
+
 ## Phase 8: Integrating sweepers with the car
 The additional components meant I needed to reopen the car, rewire the cables through a **small breadboard**, and connect the extra components to a battery and the Arduino. 
+
+<p align = "center">
+ <img src="./images/Screwing1.gif" height = 500 width = 250>
+ <img src="./images/Screwing2.gif" height = 500 width = 250>
+</p>
+
+<p align = "center">
+ <img src="./images/Servo-Wiring.jpg" height = 250 width = 500>
+</p>
+
+<p align = "center">
+  <img src="./images/Servo-System.jpg" height = 500 width = 250>
+</p>
 
 ## Phase 9: Getting the car and the sweeper to work simultaneously
 This was the **toughest problem** in thsi project. The delay time in the servos stopped the Arduino from executing the commands from the flet app, and the serial would not clear, meaning the commands would get executed all at once, which was a chaotic sight. I used `boolean` variables to check for whether there is and was an object in the car's path, used `Serial.available() > 0` to rpevent the serial buffer from freexing, and moved the sweeping to the top of the `loop()` so it would execute and not interrupt the car commands. 
