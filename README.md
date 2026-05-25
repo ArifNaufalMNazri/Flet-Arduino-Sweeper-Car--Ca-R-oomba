@@ -108,9 +108,25 @@ The additional components meant I needed to reopen the car, rewire the cables th
 ## Phase 9: Getting the car and the sweeper to work simultaneously
 This was the **toughest problem** in thsi project. The delay time in the servos stopped the Arduino from executing the commands from the flet app, and the serial would not clear, meaning the commands would get executed all at once, which was a chaotic sight. I used `boolean` variables to check for whether there is and was an object in the car's path, used `Serial.available() > 0` to rpevent the serial buffer from freexing, and moved the sweeping to the top of the `loop()` so it would execute and not interrupt the car commands. 
 
+<p align = "center">
+ <img src="./images/boolean-code-photo.png" height = 500 width = 500>
+</p>
+
 ## Final Phase: Final tests
 After making it through phase 9, I conducted a test of the car and sweepers by placing a sharpener in its path, have it sweep it away, and continue moving. I was glad to see all the systems worked correctly. 
+
+<p align = "center">
+ <img src="./images/sweep-side-view-ezgif.com-optimize.gif" width = 500 height = 250>
+</p>
+
+<p align = "center">
+ <img src = "./images/sweeper-top-view.gif" height = 500 width = 250>
+</p>
 
 ## Parting Thoughts
 I am happy to have learnt app development, hardware integration, serial and IDE communication through this project. I learned a lot about `async`, running systems simultaneously and more. I hope to bring these skills forward in my future projects. 
 
+#### Final Blooper
+<p align = "center">
+ <img src="./images/20260524_115533-ezgif.com-video-to-gif-converter.gif" height = 250 width = 500>
+</p>
